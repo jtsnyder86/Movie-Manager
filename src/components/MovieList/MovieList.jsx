@@ -11,7 +11,7 @@ function MovieList() {
     const movies = useSelector(store => store.movies);
 
     const viewDetails = () => {
-        alert('clicking on the movie card!')
+    
         dispatch({
             type: 'GET_DETAILS'
         })
