@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import DetailItem from '../DetailItem/DetailItem';
 
 
 
@@ -7,9 +8,7 @@ function DetailPage () {
 
     return(
         
-        
-        
-        <footer><Link to='/'>Return to list</Link></footer>
+        <DetailItem />
     )
 }
 
