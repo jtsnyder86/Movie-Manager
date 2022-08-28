@@ -24,7 +24,7 @@ function DetailPage () {
                     )})}
         
         
-        <footer><DetailItem /></footer>
+        <footer><Link to='/'>Return to list</Link></footer>
         
         
         </section>
