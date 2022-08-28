@@ -19,10 +19,12 @@ function DetailPage () {
                             <img src={detail.poster} alt={detail.title}/>
                             <h4>Genres: {detail.name}</h4>
                             <h5>{detail.description}</h5>
-                            <DetailItem />
+                            
                         </div>
                     )})}
         
+        
+        <footer><DetailItem /></footer>
         
         
         </section>
