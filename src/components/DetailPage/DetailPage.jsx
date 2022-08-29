@@ -16,7 +16,7 @@ function DetailPage() {
             <section>
 
 
-                <div key={movie.id}>
+                <div>
                     <h3>{movie.title}</h3>
                     <img src={movie.poster} alt={movie.title} />
                     <h5>{movie.description}</h5>
