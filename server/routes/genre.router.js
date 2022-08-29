@@ -4,6 +4,7 @@ const pool = require('../modules/pool')
 
 router.get('/', (req, res) => {
   const query = `
+                SELECT "genres".name FROM "genres"
                 `;
   pool.query(query)
     .then(result => {
@@ -11,7 +12,7 @@ router.get('/', (req, res) => {
       res.send(result.rows);
     })
     .catch(err => {
-      console.log('ERROR: Get all movies', err);
+      console.log('ERROR: GET genres names', err);
       res.sendStatus(500)
     })
 

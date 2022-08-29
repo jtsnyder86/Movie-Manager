@@ -7,7 +7,7 @@ import {useSelector} from 'react-redux';
 
 function DetailPage () {
 
-    const details = useSelector(store => (store.genres))
+    const details = useSelector(store => (store.movieId))
 
     return(
         <main>

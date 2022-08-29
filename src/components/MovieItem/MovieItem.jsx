@@ -11,11 +11,13 @@ function MovieItem({movie}) {
     const viewDetails = () => {
     
         dispatch({
-            type: 'GET_DETAILS'
+            type: 'MOVIE_ID',
+            payload: movie
         })
 
         dispatch({
-            type: 'GET_DETAILS'
+            type: 'GET_DETAILS',
+            payload: {id: movie.id}
         })
         
 
