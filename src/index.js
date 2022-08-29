@@ -43,7 +43,7 @@ function* getGenres () {
 function* getMovieDetails (action) {
     try{
         const details = yield axios.get(`/api/genre/${action.payload.id}`)
-        yield put ({type: 'MOVIE_DETAILS', payload: genres.data})
+        yield put ({type: 'MOVIE_DETAILS', payload: details.data})
     }catch {
         console.error('Error in GETing movie details');
     }

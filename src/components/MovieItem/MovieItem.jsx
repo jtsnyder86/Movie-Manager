@@ -3,13 +3,13 @@ import { useHistory } from 'react-router-dom';
 
 
 
-function MovieItem({movie}) {
+function MovieItem({ movie }) {
 
     const dispatch = useDispatch();
     const history = useHistory();
 
     const viewDetails = () => {
-    
+
         dispatch({
             type: 'MOVIE_ID',
             payload: movie
@@ -17,9 +17,9 @@ function MovieItem({movie}) {
 
         dispatch({
             type: 'GET_DETAILS',
-            payload: {id: movie.id}
+            payload: { id: movie.id }
         })
-        
+
 
         history.push(`/details/${movie.id}`)
     }
