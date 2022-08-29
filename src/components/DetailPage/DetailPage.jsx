@@ -7,21 +7,24 @@ import {useSelector} from 'react-redux';
 
 function DetailPage () {
 
-    const details = useSelector(store => (store.movieId))
+    const movie = useSelector(store => store.movieId);
+
+    const details = useSelector(store => store.movieDetails);
 
     return(
         <main>
         <section>
-            {details.map(detail => {
+            
                     return (
-                        <div key={detail.id}>
-                            <h3>{detail.title}</h3>
-                            <img src={detail.poster} alt={detail.title}/>
-                            <h4>Genres: {detail.name}</h4>
-                            <h5>{detail.description}</h5>
+                        <div key={movie.id}>
+                            <h3>{movie.title}</h3>
+                            <img src={movie.poster} alt={movie.title}/>
+                            <div><h4>Genres:{details.map(detail => { 
+                                return(<h5>{details.name}</h5>)})}</h4></div>
+                            <h5>{movie.description}</h5>
                             
                         </div>
-                    )})}
+                    )
         
         
         <footer><Link to='/'>Return to list</Link></footer>
