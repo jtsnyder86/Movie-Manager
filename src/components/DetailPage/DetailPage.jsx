@@ -19,9 +19,11 @@ function DetailPage () {
                         <div key={movie.id}>
                             <h3>{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}/>
-                            <div><h4>Genres:{details.map(detail => { 
-                                return(<h5>{details.name}</h5>)})}</h4></div>
                             <h5>{movie.description}</h5>
+                            <ul>{details.map(detail => { 
+                                return(<li>Genres:{detail.name}</li>)})}
+                            </ul>
+                            
                             
                         </div>
                     )
